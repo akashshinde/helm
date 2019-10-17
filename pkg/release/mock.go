@@ -20,7 +20,7 @@ import (
 	"math/rand"
 	"time"
 
-	"helm.sh/helm/pkg/chart"
+	"helm.sh/helm/v3/pkg/chart"
 )
 
 // MockHookTemplate is the hook template used for all mock release objects.
@@ -90,6 +90,7 @@ func Mock(opts *MockReleaseOptions) *Release {
 		LastDeployed:  date,
 		Status:        scode,
 		Description:   "Release mock",
+		Notes:         "Some mock release notes!",
 	}
 
 	return &Release{
